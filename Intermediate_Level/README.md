@@ -62,9 +62,10 @@ jupyter notebook Car_Selling-PricePrediction.ipynb
 
 ## 📈 Results
 The **Linear Regression model** achieved:
-- **MAE:** (fill after running)  
-- **MSE:** (fill after running)  
-- **R² Score:** (fill after running)  
+- **MAE:** (2.0349434490336122)  
+- **MSE:** (9.225663641224129)  
+- **RMSE Score:**( 3.0373777574124903) 
+- **R² Score:** (0.5995038184033071)  
 
 ## 📜 License
 This project is licensed under the MIT License.
