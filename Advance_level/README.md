@@ -1,106 +1,81 @@
-Language Model Deployment and Analysis
-📌 Project Overview
+Advanced NLP Project: Question Answering with DistilBERT & RoBERTa
+📌 Overview
 
-This project focuses on implementing a Language Model (LM) using Python. The goal is to understand the workflow of LM deployment, evaluate its performance, and analyze its capabilities in natural language processing (NLP).
+This project explores and deploys Question Answering (QA) Language Models using Hugging Face Transformers.
+It consists of two main parts:
 
-The notebook includes:
+Analysis Notebook (Advance_Level_final.ipynb) — in-depth exploration and comparison of DistilBERT and RoBERTa.
 
-Text preprocessing
+Streamlit App (streamlit_app.py) — interactive demo that allows users to input context and questions, and receive model-generated answers.
 
-Model training and evaluation
+The project aligns with advanced NLP/ML tasks: implementation, exploration, visualization, research questions, and deployment.
 
-Accuracy measurement
+⚙️ Models Used
 
-Output generation and interpretation
+DistilBERT → distilbert-base-cased-distilled-squad
 
-🚀 Features
+RoBERTa → deepset/roberta-base-squad2
 
-Preprocesses input text for model readiness
-
-Implements a moderate-level LM (not too basic, not overly advanced)
-
-Evaluates performance using accuracy and loss metrics
-
-Generates predictions from trained model
-
-Easy-to-follow code for educational purposes
-
-🛠️ Tech Stack
-
-Python
-
-Jupyter Notebook
-
-Libraries:
-
-NumPy
-
-Pandas
-
-Matplotlib
-
-Scikit-learn
-
-TensorFlow / PyTorch (depending on chosen LM implementation)
+Both are extractive QA models fine-tuned on the SQuAD dataset.
 
 📂 Project Structure
-├── Advance_level_final.ipynb   # Jupyter Notebook with full implementation
-├── README.md                   # Project documentation
-└── requirements.txt            # Python dependencies
+📦 nlp-qa-project/
+ ├── Advance_Level_final.ipynb   # Jupyter Notebook (analysis, experiments, visualization, conclusions)
+ ├── streamlit_app.py            # Streamlit demo app (deployment)
+ ├── requirements.txt            # Dependencies
+ └── README.md                   # Documentation
 
-⚙️ Installation
+🚀 How to Run
+1. Notebook (Analysis)
 
-Clone the repository:
-
-git clone <repo_url>
-cd <repo_name>
-
-
-Create a virtual environment and activate it:
-
-python -m venv venv
-source venv/bin/activate   # For Linux/Mac
-venv\Scripts\activate      # For Windows
-
-
-Install dependencies:
+Run the notebook in Google Colab or locally:
 
 pip install -r requirements.txt
-
-▶️ Usage
-
-Open the Jupyter Notebook:
-
-jupyter notebook
+jupyter notebook Advance_Level_final.ipynb
 
 
-Run the notebook cells step by step.
+Or open directly in Google Colab:
+👉 Open Advance_Level_final.ipynb in Colab
 
-Input your custom text to test LM predictions.
+2. Streamlit App (Deployment)
 
-📊 Results
+Run locally:
 
-Model evaluation metrics (accuracy, loss)
+pip install -r requirements.txt
+streamlit run streamlit_app.py
 
-Predictions for sample test cases
 
-Analysis of LM performance
+Deploy on Streamlit Cloud
+ or Hugging Face Spaces
+.
 
-📖 Learning Outcomes
+🔎 Research Questions Explored
 
-Understanding how to implement a language model
+Which model is more confident overall?
+→ RoBERTa is usually more confident.
 
-Applying NLP preprocessing techniques
+Do models give consistent answers?
+→ Both identify lunar maria and lava correctly, though phrasing may differ.
 
-Evaluating model accuracy and limitations
+How do models handle myth-based questions?
+→ Both can extract text about legends (e.g., people once believed the Moon had figures).
 
-Hands-on experience in deploying ML models
-🔮 Future Improvements
+📊 Key Insights
 
-Try larger pre-trained models (BERT, GPT-based)
+DistilBERT: Lightweight, fast, but less nuanced.
 
-Fine-tune on domain-specific datasets
+RoBERTa: Stronger, more confident, but heavier.
 
-Expand evaluation metrics beyond accuracy (F1, BLEU)
+Both are limited to extractive QA (they can’t invent answers beyond context).
 
-Developed as part of a machine learning and NLP project.
+Applications: education, research, quick knowledge retrieval.
+
+Future: hybrid systems combining extractive + generative models.
+
+🙌 Credits
+
+Hugging Face Transformers
+
+Streamlit
+
+PyTorch
