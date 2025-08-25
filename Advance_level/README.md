@@ -1,4 +1,5 @@
 Advanced NLP Project: Question Answering with DistilBERT & RoBERTa
+
 📌 Overview
 
 This project explores and deploys Question Answering (QA) Language Models using Hugging Face Transformers.
@@ -17,13 +18,6 @@ DistilBERT → distilbert-base-cased-distilled-squad
 RoBERTa → deepset/roberta-base-squad2
 
 Both are extractive QA models fine-tuned on the SQuAD dataset.
-
-📂 Project Structure
-📦 nlp-qa-project/
- ├── Advance_Level_final.ipynb   # Jupyter Notebook (analysis, experiments, visualization, conclusions)
- ├── streamlit_app.py            # Streamlit demo app (deployment)
- ├── requirements.txt            # Dependencies
- └── README.md                   # Documentation
 
 🚀 How to Run
 1. Notebook (Analysis)
